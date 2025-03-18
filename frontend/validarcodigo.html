@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar contraseña</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="media/style.css">
+</head>
+
+<body>
+
+  <div class="container d-flex align-items-center justify-content-center min-vh-100">
+
+    <!-- Card principal -->
+    <div class="login-card p-4 shadow-lg rounded bg-white">
+
+      <div class="text-center">
+        <div class="user-icon mb-3">
+          <!-- ejemplo de ícono -->
+          <i class="bi bi-person-circle fs-1"></i>
+        </div>
+        <h2 class="mb-4">Validar código</h2>
+      </div>
+
+        <div class="mb-3">
+          <label for="validarcodigo" class="form-label">Contraseña</label>
+          <input type="text" class="form-control" id="validarcodigo" placeholder="Ingresa el código" required />
+
+        </div>
+
+        
+        <!--  Botón de crear cuenta -->
+        <div class="d-grid">
+          <button type="submit" id="btnCrear" class="btn btn-primary">Validar código</button>
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+</body>
+
+</html>

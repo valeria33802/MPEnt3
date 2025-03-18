@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Progreso de Pedido</title>
+  
+  <!-- Bootstrap CSS -->
+  <link 
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  <!-- Bootstrap Icons (opcional, para íconos de flecha y check) -->
+  <link 
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
+  <!-- Archivo CSS externo -->
+  <link rel="stylesheet" href="media/style.css">
+</head>
+<body>
+
+  <!-- Contenedor principal -->
+  <div class="container d-flex align-items-center justify-content-center min-vh-100">
+
+    <!-- Tarjeta para el progreso -->
+    <div class="progress-card p-4">
+      
+      <!-- Flecha de retroceso -->
+      <div class="mb-3">
+        <a href="#" class="text-dark">
+          <i class="bi bi-arrow-left fs-4"></i>
+        </a>
+      </div>
+
+      <!-- Círculo superior con ícono (check o un ícono de proceso) -->
+      <div class="text-center">
+        <div class="circle-icon mx-auto mb-3">
+          <!-- Ícono de check (ej. cuando está completado) -->
+          <i class="bi bi-check fs-2"></i>
+          <!-- Podrías usar un ícono de reloj o spinner si el pedido no está completado:
+               <i class="bi bi-clock-history fs-2"></i> 
+          -->
+        </div>
+        <h4 class="mb-4">Progreso de pedido</h4>
+      </div>
+
+      <!-- Información de la orden -->
+      <div class="order-info p-3 mb-3">
+        <p class="mb-1"><strong>ID de orden:</strong> XYZ</p>
+        <p class="mb-1"><strong>Descripción:</strong><br/>
+          Teclado teclas de control personalizado, carcasa, teclas de función
+        </p>
+      </div>
+
+      <!-- Indicador de progreso circular -->
+      <div class="progress-circle-wrapper mb-3 text-center">
+        <div 
+          class="circular-progress" 
+          id="orderProgress" 
+          data-progress="30"
+        >
+          <div class="progress-value" id="progressText">30%</div>
+        </div>
+      </div>
+
+      <!-- Mensaje de estado del pedido -->
+      <div class="text-center">
+        <p class="mb-0" id="statusMessage">Solicitando producto en almacén...</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!-- Script de referencia que dejó chat -->
+  <script>
+    $(document).ready(function(){
+      // Ejemplo: cambiar el progreso de manera dinámica
+      // Toma el atributo data-progress y lo aplica en el CSS con un conic-gradient
+      function setProgress(percentage) {
+        const progressCircle = $('#orderProgress');
+        progressCircle.attr('data-progress', percentage);
+        // Actualiza el texto interno
+        $('#progressText').text(percentage + '%');
+        // Si quisieras cambiar el estado según el porcentaje
+        if (percentage < 100) {
+          $('#statusMessage').text('En proceso...');
+        } else {
+          $('#statusMessage').text('Pedido completado');
+        }
+      }
+
+      // Inicializar el progreso a partir del data-attribute
+      let initialProgress = parseInt($('#orderProgress').attr('data-progress'));
+      setProgress(initialProgress);
+
+      // Simulación: incrementar el progreso cada 2 segundos
+      // (Elimínalo o modifícalo si no lo necesitas)
+      let simulatedProgress = initialProgress;
+      const interval = setInterval(function(){
+        if (simulatedProgress < 100) {
+          simulatedProgress += 10;
+          setProgress(simulatedProgress);
+        } else {
+          clearInterval(interval);
+        }
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

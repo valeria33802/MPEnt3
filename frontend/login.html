@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantalla de Login</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <link rel="stylesheet" href="media/style.css">
+</head>
+<body>
+
+  <div class="container d-flex align-items-center justify-content-center min-vh-100">
+    
+    <!-- Card principal -->
+    <div class="login-card p-4 shadow-lg rounded bg-white">
+      
+      <div class="text-center">
+        <div class="user-icon mb-3">
+          <i class="bi bi-person-circle fs-1"></i>
+        </div>
+        <h2 class="mb-4">Iniciar Sesión</h2>
+      </div>
+
+      <!-- Formulario de Login -->
+      <form id="loginForm">
+        <div class="mb-3">
+          <label for="nombreusuario" class="form-label">Nombre de usuario</label>
+          <input type="text" class="form-control" id="nombreusuario" placeholder="Ingresa tu nombre de usuario" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required />
+        </div>
+
+        <!-- Mensaje de error -->
+        <div id="mensajeError" class="text-danger text-center" style="display: none;"></div>
+
+        <!--  Botón de ingresar que activa la acción de login -->
+        <div class="d-grid">
+          <button type="submit" id="btnIngresar" class="btn btn-primary">Ingresar</button>
+        </div>
+      </form>
+
+      <div class="text-center mt-3">
+        <p>¿No tienes cuenta? <a href="registro.html">Registrarse</a></p>
+        <p><a href="recuperarcontrasenia.html">¿Olvidaste tu contraseña?</a></p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Script de Login -->
+  <script src="script.js"></script>
+
+</body>
+</html>

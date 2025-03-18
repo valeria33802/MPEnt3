@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Empleados</title>
+
+  <!-- Bootstrap CSS -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  <!-- Bootstrap Icons -->
+  <link 
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
+ 
+  <link rel="stylesheet" href="media/style.css" />
+</head>
+<body>
+
+  <!-- Contenedor principal -->
+  <div class="container d-flex align-items-center justify-content-center min-vh-100">
+    
+    <!-- Tarjeta empleados -->
+    <div class="employees-card p-4">
+      
+      <!-- Flecha de retroceso -->
+      <div class="mb-3">
+        <a href="#" class="text-dark">
+          <i class="bi bi-arrow-left fs-4"></i>
+        </a>
+      </div>
+
+      <!-- Ícono de usuario (arriba) y título -->
+      <div class="text-center mb-4">
+        <div class="user-icon mx-auto mb-2">
+          <i class="bi bi-person fs-3"></i>
+        </div>
+        <h4 class="fw-bold m-0">Gestor</h4>
+      </div>
+      
+      <!-- Lista de empleados con scroll -->
+      <div class="employees-list p-2">
+        
+        <!-- Empleado 1 -->
+        <div class="employee-item mb-3 p-3 d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+            <!-- Ícono del empleado en un círculo gris -->
+            <div class="employee-icon me-3">
+              <i class="bi bi-person fs-4"></i>
+            </div>
+            <!-- Información textual -->
+            <div>
+              <p class="m-0"><strong>ID:</strong> 001</p>
+              <p class="m-0">Nombre Apellido</p>
+              <p class="m-0">Puesto: A</p>
+            </div>
+          </div>
+          <!-- Lápiz (editar) y Botón “Ver horario” -->
+          <div class="text-end">
+            <i class="bi bi-pencil fs-5 edit-icon mb-2 d-block"></i>
+            <button class="btn btn-success btn-sm">Ver horario</button>
+          </div>
+        </div>
+
+        <!-- Empleado 2 -->
+        <div class="employee-item mb-3 p-3 d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+            <div class="employee-icon me-3">
+              <i class="bi bi-person fs-4"></i>
+            </div>
+            <div>
+              <p class="m-0"><strong>ID:</strong> 002</p>
+              <p class="m-0">Nombre Apellido</p>
+              <p class="m-0">Puesto: A</p>
+            </div>
+          </div>
+          <div class="text-end">
+            <i class="bi bi-pencil fs-5 edit-icon mb-2 d-block"></i>
+            <button class="btn btn-success btn-sm">Ver horario</button>
+          </div>
+        </div>
+
+        <!-- Empleado 3 -->
+        <div class="employee-item mb-3 p-3 d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+            <div class="employee-icon me-3">
+              <i class="bi bi-person fs-4"></i>
+            </div>
+            <div>
+              <p class="m-0"><strong>ID:</strong> 003</p>
+              <p class="m-0">Nombre Apellido</p>
+              <p class="m-0">Puesto: A</p>
+            </div>
+          </div>
+          <div class="text-end">
+            <i class="bi bi-pencil fs-5 edit-icon mb-2 d-block"></i>
+            <button class="btn btn-success btn-sm">Ver horario</button>
+          </div>
+        </div>
+
+        <!-- Agrega más empleados según necesites -->
+
+      </div> <!-- Fin .employees-list -->
+    </div> <!-- Fin .employees-card -->
+    
+  </div>
+
+  <!-- jQuery (opcional) -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!-- Script adicional (opcional) -->
+  <script>
+    $(document).ready(function(){
+      // Ejemplo: al hacer clic en el ícono de editar
+      $('.edit-icon').on('click', function(){
+        alert('Editar información del empleado (ejemplo)');
+      });
+      // Ejemplo: al hacer clic en “Ver horario”
+      $('.btn-success').on('click', function(){
+        alert('Mostrando horario (ejemplo)');
+      });
+    });
+  </script>
+</body>
+</html>

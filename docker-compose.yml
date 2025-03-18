@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  node:
+    build: ./negocios      # Ruta a la carpeta del servicio Node.js
+    ports:
+      - "8000:8000"        # Mapea el puerto interno 8000 al host
+    networks:
+      - mynetwork
+
+  python:
+    build: ./python_api    # Ruta a la carpeta de la API en Python
+    ports:
+      - "3300:3300"
+    env_file:
+    - .env        # Mapea el puerto interno 3300 al host
+    networks:
+      - mynetwork
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"        # Puerto para clientes AMQP
+      - "15672:15672"      # Puerto para la interfaz de administración web
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge

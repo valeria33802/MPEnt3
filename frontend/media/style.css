@@ -1,0 +1,751 @@
+/* Estilo general del login*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #88CED7;
+  }
+  
+  /* Título principal */
+  .text-title {
+    text-align: center;
+    color: #0B265C;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor de íconos */
+  .icon-box {
+    width: 80px;
+    height: 80px;
+    background-color: #B6F0CE;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #0B265C;
+  }
+  
+  /* Botón circular */
+  .close-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #F06357;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    background-color: #d9544e;
+  }
+  
+
+  /* ------------------------------------
+  ------------------------------------ */
+
+  /* Estilo del inicio */
+  /* Card principal */
+  .login-card {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Flecha de retroceso */
+  .back-arrow {
+    margin-bottom: 15px;
+  }
+  
+  /* Ícono de usuario */
+  .user-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+  }
+  
+  /* Botón de acceso */
+  .btn-primary {
+    background-color: #0B265C;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #092044;
+  }
+  
+
+    /* ------------------------------------
+  ------------------------------------ */
+
+  /* Estilo del perfil */
+
+  /* Tarjeta principal */
+  .profile-card {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Ícono de usuario */
+  .user-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Ícono de lápiz en los campos */
+  .input-edit-icon {
+    position: absolute;
+    top: 40px; /* Ajusta según la altura de tu label */
+    right: 10px;
+    cursor: pointer;
+    color: #6c757d; /* gris Bootstrap por defecto */
+  }
+  
+  .input-edit-icon:hover {
+    color: #343a40; /* un gris más oscuro */
+  }
+  
+  /* Botones */
+  .btn-delete, .btn-update {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Botón Eliminar (naranja) */
+  .btn-delete {
+    background-color: #F06357; /* Ejemplo de naranja */
+  }
+  
+  .btn-delete:hover {
+    background-color: #d9544e;
+  }
+  
+  /* Botón Actualizar (azul oscuro) */
+  .btn-update {
+    background-color: #0B265C;
+  }
+  
+  .btn-update:hover {
+    background-color: #092044;
+  }
+  
+
+  
+    /* ------------------------------------
+  ------------------------------------ */
+
+  /* Estilo de metodos de pago */
+
+  /* Estilo general del body */
+
+  /* Tarjeta principal */
+  .payment-card {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Círculo con ícono en la parte superior */
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Lista y contenedor de cada tarjeta de pago
+  .payment-list {
+    /* Puedes agregar estilos generales si gustas */
+  /* } */ */ 
+  
+  .payment-item {
+    background-color: #ECECEC; 
+    border-radius: 0.5rem;
+  }
+  
+  /* Ícono de lápiz dentro de las tarjetas */
+  .edit-icon {
+    cursor: pointer;
+    color: #6c757d; 
+  }
+  
+  .edit-icon:hover {
+    color: #343a40;
+  }
+  
+  
+    /* ------------------------------------
+  ------------------------------------ */
+
+  /* Estilo de catalogo usuario */
+
+  
+  /* Tarjeta principal */
+  .catalog-card {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Items del catálogo */
+  .catalog-item {
+    background-color: #B6F0CE; /* Color similar al de tu Figma */
+    border-radius: 0.5rem;
+    padding: 10px;
+  }
+  
+  /* Header de cada item */
+  .catalog-item-header h5 {
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #0B265C; /* Ajusta según tu diseño */
+  }
+  
+  /* Imagen placeholder (máx 512x512) */
+  .placeholder-image {
+    max-width: 100px; /* Ajusta a tu preferencia para móviles */
+    max-height: 100px;
+    /* O si deseas exacto 512x512, quita la línea de max-width 
+       y solo define width: 512px; height: 512px; 
+       pero en móviles puede verse muy grande */
+    object-fit: cover;
+    border-radius: 0.25rem;
+  }
+
+  .catalog-content {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que los elementos bajen de línea */
+    overflow-x: auto; /* Permite el scroll horizontal */
+    gap: 10px;
+    padding-bottom: 10px; /* Espacio extra para el scroll */
+  }
+
+ /* ------------------------------------
+  ------------------------------------ */
+
+  /* Estilo de compra */
+  
+  /* Tarjeta principal */
+  .catalog-purchase-card {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Tarjeta interna para los detalles del producto */
+  .product-card {
+    background-color: #F8F9FA; /* Gris claro Bootstrap */
+    border-radius: 0.5rem;
+  }
+  
+  /* Placeholder de imagen (hasta 512 x 512) */
+  .product-placeholder {
+    max-width: 100%;
+    max-height: 512px;
+    object-fit: cover; /* Ajusta si la imagen se deforma */
+    border-radius: 0.25rem;
+  }
+  
+
+  /* ------------------------------------
+  ------------------------------------ */
+
+  /* Estilo de carrito */
+
+  /* Contenedor principal (tarjeta del carrito) */
+  .cart-card {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Ícono de usuario en círculo */
+  .user-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Sección que contiene los productos */
+  .cart-items {
+    background-color: #F8F9FA;
+    border-radius: 0.5rem;
+  }
+  
+  /* Cada fila de producto */
+  .shopping-item span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #0B265C; 
+  }
+  
+  /* Ícono de carrito */
+  .cart-icon {
+    color: #5A4976; 
+  }
+  
+  /* Botones de acción */
+  .btn-cancel, .btn-buy {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Botón Cancelar (naranja) */
+  .btn-cancel {
+    background-color: #F06357;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #d9544e;
+  }
+  
+  /* Botón Comprar (azul oscuro) */
+  .btn-buy {
+    background-color: #0B265C;
+  }
+  
+  .btn-buy:hover {
+    background-color: #092044;
+  }
+  
+  /* ------------------------------------
+  ------------------------------------ */
+
+  /* Estilo de historial */
+
+  
+  /* Tarjeta principal del historial */
+  .history-card {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Contenedor de los items de historial */
+  .history-items {
+    background-color: #ECECEC; /* Ajusta al gris que desees */
+    border-radius: 0.5rem;
+  }
+  
+  /* Item individual */
+  .history-item {
+    background-color: #fff; 
+    border-radius: 0.25rem;
+  }
+  
+ /* ------------------------------------
+  ------------------------------------ */
+
+  /* Estilo de faq */
+
+
+  /* Tarjeta principal del FAQ */
+.faq-card {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Contenedor de items con scroll */
+.faq-items {
+  background-color: #ECECEC; /* Ajusta el color al que desees */
+  border-radius: 0.5rem;
+  max-height: 300px; /* Controla la altura para habilitar scroll */
+  overflow-y: auto;  /* Scroll vertical */
+}
+
+/* Cada FAQ item */
+.faq-item {
+  background-color: #fff;
+  border-radius: 0.25rem;
+}
+
+/* Personaliza la barra de desplazamiento en navegadores WebKit (Chrome, Safari, etc.) */
+.faq-items::-webkit-scrollbar {
+  width: 8px;
+}
+
+.faq-items::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.faq-items::-webkit-scrollbar-thumb {
+  background: #0B265C; /* Color del thumb */
+  border-radius: 10px;
+}
+
+.faq-items::-webkit-scrollbar-thumb:hover {
+  background: #092044; /* Hover color */
+  
+}
+
+/* ------------------------------------
+  ------------------------------------ */
+
+  /* Estilo de progreso de pedido */
+
+  /* Tarjeta principal de progreso */
+.progress-card {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Círculo superior con ícono de check */
+.circle-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor info de la orden */
+.order-info {
+  background-color: #ECECEC;
+  border-radius: 0.5rem;
+}
+
+/* Contenedor para el indicador de progreso circular */
+.progress-circle-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Indicador circular
+   Usamos conic-gradient con una variable para el ángulo */
+.circular-progress {
+  --progress-color: #0B265C;    /* Color del avance (ajusta según diseño) */
+  --background-color: #ECECEC;  /* Fondo gris del círculo */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  /* background se actualizará via JS usando el data-progress */
+}
+
+/* Usaremos un pseudo-elemento para pintar la parte "llenada" */
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--progress-color) calc(var(--progress, 0) * 1%), 
+    var(--background-color) 0
+  );
+}
+
+/* Texto dentro del círculo (porcentaje) */
+.progress-value {
+  font-weight: bold;
+  color: #0B265C;
+  z-index: 1; /* Para que quede encima del pseudo-elemento */
+}
+
+/* Actualizar el background con un selector de atributo data-progress */
+.circular-progress[data-progress]::before {
+  background: 
+    conic-gradient(
+      var(--progress-color) calc((attr(data-progress) * 1%) ), 
+      var(--background-color) 0
+    );
+}
+
+/* ------------------------------------
+  ------------------------------------ */
+
+  /* Estilo de progreso de reseñas */
+
+/* Tarjeta de reseñas */
+.reviews-card {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Ícono principal en la parte superior (círculo) */
+.review-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Reseñas existentes */
+.existing-reviews {
+  background-color: #ECECEC;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+/* Cada reseña */
+.review-item {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+/* Ícono de usuario */
+.user-img {
+  width: 40px;
+  height: 40px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estrellas fijas (para reseñas existentes) */
+.review-content .stars i {
+  color: #FBC02D; /* Color dorado */
+}
+
+/* Sección para nueva reseña */
+.new-review {
+  background-color: #ECECEC;
+  border-radius: 0.5rem;
+}
+
+/* Estrellas interactivas */
+.stars-interactive i {
+  font-size: 1.5rem;
+  color: #FBC02D; /* Color dorado */
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.stars-interactive i:hover {
+  filter: brightness(1.2);
+}
+
+/* ------------------------------------
+  ------------------------------------ */
+
+  /* Estilo de progreso de inventario */
+
+
+/* Tarjeta contenedora del Inventario */
+.inventory-card {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Ícono de usuario */
+.user-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor que tendrá scroll vertical */
+.inventory-list {
+  background-color: #ECECEC;
+  border-radius: 0.5rem;
+  max-height: 300px; /* Ajusta el alto máximo según tu diseño */
+  overflow-y: auto;  /* Scroll vertical */
+}
+
+/* Personaliza la barra de scroll en navegadores WebKit (Chrome, Safari) */
+.inventory-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.inventory-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.inventory-list::-webkit-scrollbar-thumb {
+  background: #0B265C;
+  border-radius: 10px;
+}
+
+.inventory-list::-webkit-scrollbar-thumb:hover {
+  background: #092044;
+}
+
+/* Cada tarjeta de ítem */
+.item-card {
+  background-color: #E8F0F2; /* Cambia este color si gustas */
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+/* Contenedor de la imagen */
+.item-image {
+  width: 100%;
+  background-color: #D9D9D9; /* Gris de placeholder */
+  border-radius: 0.25rem;
+}
+
+.item-card p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #0B265C;
+}
+
+/* ------------------------------------
+  ------------------------------------ */
+
+  /* Estilo de progreso manejo empleados */
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #88CED7; /* Color de fondo tipo Figma */
+}
+
+/* Tarjeta principal de empleados */
+.employees-card {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Ícono grande arriba */
+.user-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor con scroll vertical para la lista de empleados */
+.employees-list {
+  background-color: #ECECEC;
+  border-radius: 0.5rem;
+  max-height: 300px; /* Ajusta la altura máxima para el scroll */
+  overflow-y: auto;
+  padding: 10px;
+}
+
+/* Barra de scroll en navegadores basados en WebKit */
+.employees-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.employees-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.employees-list::-webkit-scrollbar-thumb {
+  background: #0B265C;
+  border-radius: 10px;
+}
+
+.employees-list::-webkit-scrollbar-thumb:hover {
+  background: #092044;
+}
+
+/* Tarjeta individual de empleado */
+.employee-item {
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+/* Ícono de empleado dentro de la tarjeta */
+.employee-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ícono de lápiz para editar */
+.edit-icon {
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.edit-icon:hover {
+  color: #495057;
+}
+
+/* Botón “Ver horario” */
+.btn-success {
+  background-color: #28a745; /* Verde de Bootstrap */
+  border: none;
+}
+.btn-success:hover {
+  background-color: #218838;
+}

@@ -1,12 +1,29 @@
 version: "3.8"
 services:
   node:
-    build: ./negocios      # Ruta a la carpeta del servicio Node.js
+    build:
+      context: .       # La raíz del proyecto, que contiene "datos", "negocios", "controllers", etc.
+      dockerfile: ./negocios/Dockerfile  # Ubicación del Dockerfile
+    depends_on:
+      - mysql
     ports:
-      - "8000:8000"        # Mapea el puerto interno 8000 al host
+      - "3000:3000"
+    environment:
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      # Otras variables necesarias
     networks:
       - mynetwork
 
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: xLpA976WaS.,l
+      MYSQL_DATABASE: modp
+    ports:
+      - "3307:3306"  # o el puerto que decidas usar en el host
+    networks:
+      - mynetwork
   python:
     build: ./python_api    # Ruta a la carpeta de la API en Python
     ports:

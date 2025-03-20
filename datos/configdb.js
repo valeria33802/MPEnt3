@@ -1,9 +1,5 @@
 const mysql = require('mysql2/promise');
-
-const dotenv = require("dotenv");
-dotenv.config()
-
-//manejo de conexiones simultáneas
+require('dotenv').config(); // Esto carga las variables de entorno del .env
 
 const pool = mysql.createPool({
     host: process.env.DB_HOST,
@@ -15,6 +11,9 @@ const pool = mysql.createPool({
     connectionLimit: 10,
     queueLimit: 0 
 });
+
+
+
 
 // Probar la conexión
 (async () => {

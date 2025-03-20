@@ -8,4 +8,4 @@ class LoginRequest(BaseModel):
 class LoginResponse(BaseModel):
     success: bool
     mensaje: str
-    posicion: str | None = None  # Posición es opcional en caso de error o no retornarse
+    posicion: str | None = None  # Posición es opcional

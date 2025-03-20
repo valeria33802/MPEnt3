@@ -3,13 +3,13 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const apiController = require('./python_api/apicontroller');
+// const apiController = require('./python_api/apicontroller');
 
 app.use(cors());
 app.use(express.json());
 
 
-app.use('/api', apiController);
+// app.use('/api', apiController);
 
 
 app.use(express.static('frontend'));

@@ -6,7 +6,7 @@ import os
 
 router = APIRouter()
 
-NODE_SERVICE_URL = os.getenv("NODE_SERVICE_URL", "http://node:8000")  # Por ejemplo, si el servicio Node se llama "node" en Docker
+NODE_SERVICE_URL = os.getenv("NODE_SERVICE_URL", "http://node:3000")  # Por ejemplo, si el servicio Node se llama "node" en Docker
 
 @router.post("/login", response_model=LoginResponse)
 async def login_endpoint(login_data: LoginRequest):

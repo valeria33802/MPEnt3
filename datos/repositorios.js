@@ -16,7 +16,7 @@ const pool = require('./configdb');
 async function loginUser(nombreusuario, contrasenia) {
     try {
       
-      const [result] = await pool.query('CALL spd_login(?, ?)', [nombreusuario, contrasenia]);
+      const [result] = await pool.query('call spd_login(?, ?)', [nombreusuario, contrasenia]);
       const data = result[0];
       return data;
     } catch (error) {

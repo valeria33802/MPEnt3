@@ -1,18 +1,16 @@
+require('dotenv').config();
 const mysql = require('mysql2/promise');
-require('dotenv').config(); // Esto carga las variables de entorno del .env
 
 const pool = mysql.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT || 3306, 
+    host: 'mysql', // ya que el contenedor MySQL se llama "mysql" en docker-compose
+    user: 'root',  // Usar root ya que MYSQL_USER fue removido
+    password: process.env.MYSQL_ROOT_PASSWORD,
+    database: process.env.MYSQL_DATABASE,
+    port: 3306,
     waitForConnections: true, 
     connectionLimit: 10,
     queueLimit: 0 
-});
-
-
+  });
 
 
 // Probar la conexión

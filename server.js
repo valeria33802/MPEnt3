@@ -10,8 +10,11 @@ app.use(express.json());
 // Importa el controlador de la API que contiene múltiples endpoints
 const apiController = require('./negocios/controller');
 
-
-app.use('/api', apiController);
+app.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+  });
+  
+app.use('/', apiController);
 
 app.use(express.static('frontend'));
 

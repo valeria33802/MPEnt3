@@ -1,14 +1,12 @@
 # python_api/main.py
 from fastapi import FastAPI
-from routes import login  
+from routes import routers  
 
 from dotenv import load_dotenv
 load_dotenv()
 
-
 app = FastAPI(title="API Proxy - Python para Servicios Node")
 
-# Incluye el router con un prefijo (por ejemplo, /api)
-app.include_router(login.router, prefix="/api")
-
-#mas routers
+# Incluir todos los routers de la lista importada
+for router in routers:
+    app.include_router(router, prefix="/api")

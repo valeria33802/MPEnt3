@@ -1,8 +1,5 @@
 USE modp;
 
-----------------------------------------
--- Procedimiento: spd_login
-----------------------------------------
 DROP PROCEDURE IF EXISTS spd_login;
 DELIMITER //
 
@@ -84,9 +81,7 @@ END //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimiento: sp_insert_comprador
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_insert_comprador;
 DELIMITER //
 
@@ -127,9 +122,7 @@ END //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimiento: sp_modificar_comprador
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_modificar_comprador;
 DELIMITER //
 
@@ -223,9 +216,7 @@ END proc //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimiento: sp_generar_datos_cliente
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_generar_datos_cliente;
 DELIMITER //
 
@@ -258,9 +249,7 @@ END //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimiento: sp_insert_feedback
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_insert_feedback;
 DELIMITER //
 
@@ -285,9 +274,7 @@ END //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimiento: sp_modificar_empleado
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_modificar_empleado;
 DELIMITER //
 
@@ -374,9 +361,7 @@ END proc //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimiento: sp_insert_proyecto_final
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_insert_proyecto_final;
 DELIMITER //
 
@@ -464,9 +449,7 @@ END //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimiento: sp_filtrar_servicios
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_filtrar_servicios;
 DELIMITER //
 
@@ -502,9 +485,7 @@ END //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimiento: sp_sumar_stock
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_sumar_stock;
 DELIMITER //
 
@@ -543,9 +524,7 @@ END //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimiento: sp_generar_info_ultimo_comprador
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_generar_info_ultimo_comprador;
 DELIMITER //
 
@@ -590,9 +569,7 @@ END //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimiento: sp_actualizar_estado_proyecto
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_actualizar_estado_proyecto;
 DELIMITER //
 
@@ -660,9 +637,7 @@ END //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimientos para ejecutar vistas
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS ejecutar_vista_articulos;
 DELIMITER //
 
@@ -699,9 +674,7 @@ DELIMITER ;
 
 -- CALL ejecutar_vista_calificaciones();
 
-----------------------------------------
--- Procedimiento: sp_insert_codigo
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_insert_codigo;
 DELIMITER //
 
@@ -734,9 +707,7 @@ END //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimiento: sp_obtener_correo_usuario
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_obtener_correo_usuario;
 DELIMITER //
 
@@ -758,9 +729,7 @@ END //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimiento: sp_cambio_contrasenia
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_cambio_contrasenia;
 DELIMITER //
 
@@ -802,9 +771,7 @@ END //
 
 DELIMITER ;
 
-----------------------------------------
--- Procedimiento: sp_validar_codigo
-----------------------------------------
+
 DROP PROCEDURE IF EXISTS sp_validar_codigo;
 DELIMITER //
 

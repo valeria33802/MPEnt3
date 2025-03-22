@@ -1,6 +1,5 @@
-
-CREATE DATABASE IF NOT EXISTS MODPtest;
-USE MODPtest;
+CREATE DATABASE IF NOT EXISTS modp;
+USE modp;
 
 
 CREATE TABLE Catalogo_Tipos (
@@ -219,3 +218,4 @@ CREATE TABLE Codigo (
 );
 
 -- Fin del script
+

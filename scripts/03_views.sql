@@ -18,22 +18,15 @@ CREATE VIEW faq_preguntas AS
     FROM FAQ;
 
 
-CALL sp_historial_compra_ultimo_usuario();
+
 
 DROP VIEW IF EXISTS vista_evaluaciones;
 CREATE VIEW vista_evaluaciones AS 
     SELECT
         Co.CO_Calificacion AS 'Calificacion',
-        Co.Descripción AS 'Descripción'
+        Co.Descripcion AS 'Descripción'
     FROM Comentarios Co;
 
--- Consulta de la vista Evaluaciones
-SELECT * FROM vista_evaluaciones;
-
-DROP VIEW IF EXISTS ver_paises;
-CREATE VIEW ver_paises AS
-    SELECT pa.nombre AS 'Paises'
-    FROM pais pa;
 
 -- Consulta de la vista Paises
-SELECT * FROM ver_paises;
+

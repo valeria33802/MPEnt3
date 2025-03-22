@@ -1,128 +1,129 @@
 
+USE modp;
+
+
 INSERT INTO pais (id, nombre) VALUES 
-(1, 'Costa Rica'),
-(2, 'República Dominicana'),
-(3, 'Argentina');
+    (1, 'Costa Rica'),
+    (2, 'República Dominicana'),
+    (3, 'Argentina');
+
 
 INSERT INTO provincia (id, nombre, pais_id) VALUES
--- Costa Rica
-(1, 'San José', 1),
-(2, 'Cartago', 1),
-(3, 'Heredia', 1),
--- República Dominicana
-(4, 'Distrito Nacional', 2),
-(5, 'Santiago', 2),
-(6, 'La Vega', 2),
-(7, 'Puerto Plata', 2),
--- Argentina
-(8, 'Buenos Aires', 3),
-(9, 'Córdoba', 3),
-(10, 'Mendoza', 3),
-(11, 'Santa Fe', 3);
+    -- Costa Rica
+    (1, 'San José', 1),
+    (2, 'Cartago', 1),
+    (3, 'Heredia', 1),
+    -- República Dominicana
+    (4, 'Distrito Nacional', 2),
+    (5, 'Santiago', 2),
+    (6, 'La Vega', 2),
+    (7, 'Puerto Plata', 2),
+    -- Argentina
+    (8, 'Buenos Aires', 3),
+    (9, 'Córdoba', 3),
+    (10, 'Mendoza', 3),
+    (11, 'Santa Fe', 3);
 
 
 INSERT INTO cantones (id, nombre, provincia_id) VALUES
--- Costa Rica - Provincia San José
-(1, 'Escazú', 1),
-(2, 'Desamparados', 1),
-(3, 'Tibás', 1),
-(4, 'Moravia', 1),
--- Costa Rica - Provincia Cartago
-(5, 'Cartago', 2),
-(6, 'Paraíso', 2),
-(7, 'La Unión', 2),
-(8, 'Turrialba', 2),
--- Costa Rica - Provincia Heredia
-(9, 'Barva', 3),
-(10, 'Santo Domingo', 3),
-(11, 'San Rafael', 3),
-(12, 'San Isidro', 3),
--- República Dominicana
-(13, 'Santo Domingo', 4),  -- para los barrios de Santo Domingo (Distrito Nacional)
-(14, 'Santiago', 5),
-(15, 'La Vega', 6),
-(16, 'Puerto Plata', 7),
--- Argentina
-(17, 'Buenos Aires', 8),
-(18, 'Córdoba', 9),
-(19, 'Mendoza', 10),
-(20, 'Santa Fe', 11);
-
-INSERT INTO distritos (id, nombre, canton_id) VALUES
--- Provincia San José
-(1, 'Escazú', 1),
-(2, 'Desamparados', 2),
-(3, 'San Juan', 3),
-(4, 'San Vicente', 4),
--- Provincia Cartago
-(5, 'Oriental', 5),
-(6, 'Paraíso', 6),
-(7, 'Tres Ríos', 7),
-(8, 'Turrialba', 8),
--- Provincia Heredia
-(9, 'Barva', 9),
-(10, 'Santo Domingo', 10),
-(11, 'San Rafael', 11),
-(12, 'San Isidro', 12);
+    -- Costa Rica - Provincia San José
+    (1, 'Escazú', 1),
+    (2, 'Desamparados', 1),
+    (3, 'Tibás', 1),
+    (4, 'Moravia', 1),
+    -- Costa Rica - Provincia Cartago
+    (5, 'Cartago', 2),
+    (6, 'Paraíso', 2),
+    (7, 'La Unión', 2),
+    (8, 'Turrialba', 2),
+    -- Costa Rica - Provincia Heredia
+    (9, 'Barva', 3),
+    (10, 'Santo Domingo', 3),
+    (11, 'San Rafael', 3),
+    (12, 'San Isidro', 3),
+    -- República Dominicana
+    (13, 'Santo Domingo', 4),  -- para los barrios de Santo Domingo (Distrito Nacional)
+    (14, 'Santiago', 5),
+    (15, 'La Vega', 6),
+    (16, 'Puerto Plata', 7),
+    -- Argentina
+    (17, 'Buenos Aires', 8),
+    (18, 'Córdoba', 9),
+    (19, 'Mendoza', 10),
+    (20, 'Santa Fe', 11);
 
 
 INSERT INTO distritos (id, nombre, canton_id) VALUES
--- Cantón Santo Domingo (Distrito Nacional)
-(13, 'Los Mina', 13),
-(14, 'Alma Rosa', 13),
-(15, 'Ensanche Ozama', 13),
-(16, 'Villa Faro', 13),
--- Cantón Santiago
-(17, 'Centro Histórico', 14),
-(18, 'Gurabito', 14),
-(19, 'Pekín', 14),
-(20, 'Los Jardines', 14),
--- Cantón La Vega
-(21, 'Villa Rosa', 15),
-(22, 'Palmarito', 15),
-(23, 'El Pontón', 15),
-(24, 'Las Carmelitas', 15),
--- Cantón Puerto Plata
-(25, 'Centro', 16),
-(26, 'Ensanche Miramar', 16),
-(27, 'Costámbar', 16),
-(28, 'Cofresí', 16);
+    -- Provincia San José
+    (1, 'Escazú', 1),
+    (2, 'Desamparados', 2),
+    (3, 'San Juan', 3),
+    (4, 'San Vicente', 4),
+    -- Provincia Cartago
+    (5, 'Oriental', 5),
+    (6, 'Paraíso', 6),
+    (7, 'Tres Ríos', 7),
+    (8, 'Turrialba', 8),
+    -- Provincia Heredia
+    (9, 'Barva', 9),
+    (10, 'Santo Domingo', 10),
+    (11, 'San Rafael', 11),
+    (12, 'San Isidro', 12);
+
 
 INSERT INTO distritos (id, nombre, canton_id) VALUES
--- Cantón Buenos Aires
-(29, 'Centro', 17),
-(30, 'Tolosa', 17),
-(31, 'City Bell', 17),
-(32, 'Gonnet', 17),
--- Cantón Córdoba
-(33, 'Nueva Córdoba', 18),
-(34, 'Centro', 18),
-(35, 'Alberdi', 18),
-(36, 'General Paz', 18),
--- Cantón Mendoza
-(37, 'Centro', 19),
-(38, 'Cuarta Sección', 19),
-(39, 'La Favorita', 19),
-(40, 'Sexta Sección', 19),
--- Cantón Santa Fe
-(41, 'Centro', 20),
-(42, 'Barrio Candioti', 20),
-(43, 'Barranquitas', 20),
-(44, 'Guadalupe', 20);
+    -- Cantón Santo Domingo (Distrito Nacional)
+    (13, 'Los Mina', 13),
+    (14, 'Alma Rosa', 13),
+    (15, 'Ensanche Ozama', 13),
+    (16, 'Villa Faro', 13),
+    -- Cantón Santiago
+    (17, 'Centro Histórico', 14),
+    (18, 'Gurabito', 14),
+    (19, 'Pekín', 14),
+    (20, 'Los Jardines', 14),
+    -- Cantón La Vega
+    (21, 'Villa Rosa', 15),
+    (22, 'Palmarito', 15),
+    (23, 'El Pontón', 15),
+    (24, 'Las Carmelitas', 15),
+    -- Cantón Puerto Plata
+    (25, 'Centro', 16),
+    (26, 'Ensanche Miramar', 16),
+    (27, 'Costámbar', 16),
+    (28, 'Cofresí', 16);
 
 
+INSERT INTO distritos (id, nombre, canton_id) VALUES
+    -- Cantón Buenos Aires
+    (29, 'Centro', 17),
+    (30, 'Tolosa', 17),
+    (31, 'City Bell', 17),
+    (32, 'Gonnet', 17),
+    -- Cantón Córdoba
+    (33, 'Nueva Córdoba', 18),
+    (34, 'Centro', 18),
+    (35, 'Alberdi', 18),
+    (36, 'General Paz', 18),
+    -- Cantón Mendoza
+    (37, 'Centro', 19),
+    (38, 'Cuarta Sección', 19),
+    (39, 'La Favorita', 19),
+    (40, 'Sexta Sección', 19),
+    -- Cantón Santa Fe
+    (41, 'Centro', 20),
+    (42, 'Barrio Candioti', 20),
+    (43, 'Barranquitas', 20),
+    (44, 'Guadalupe', 20);
 
-/*-----------------------
--------------------------*/
 
-
--- Insertar tipos de productos en Catalogo_Tipos
 INSERT INTO Catalogo_Tipos (ID_Tipo, CATI_Nombre) VALUES
     ('TE', 'Teclado'),
     ('MI', 'Microfono'),
     ('RA', 'Raton'),
     ('PA', 'Parlante'),
     ('CA', 'Camara Web');
+
 
 -- TECLADOS
 INSERT INTO Catalogo (ID_Articulo, CAT_Tipo, CAT_Nombre, CATI_Descripcion, CATI_Cantidad, CATI_Venta, CATI_Precio) VALUES
@@ -182,7 +183,7 @@ INSERT INTO Catalogo (ID_Articulo, CAT_Tipo, CAT_Nombre, CATI_Descripcion, CATI_
     ('CA003', 'CA', 'Razer Nommo V2 Pro', 'Cámara web: Sistema con dos altavoces de 3" y subwoofer de 5.5", en oferta a $294 USD.', 4, 2, 294 * 505.82),
     ('CA004', 'CA', 'Logitech G560 LIGHTSYNC', 'Cámara web: Sistema 2.1 con 240W, RGB sincronizado y conectividad Bluetooth, USB y AUX.', 5, 2, 199.99 * 505.82);
 
--- Servicios para Teclado (TESE)
+
 INSERT INTO ServicioPorProducto (ID_Servicio, SE_Descripcion, Precio, CAT_Tipo) VALUES
     ('TESE1', 'Keycaps - Material ABS, PBT, POM', 10000, 'TE'),
     ('TESE2', 'Keycaps - Legends personalizadas', 20000, 'TE'),
@@ -254,32 +255,22 @@ INSERT INTO ServicioPorProducto (ID_Servicio, SE_Descripcion, Precio, CAT_Tipo) 
     ('CASE3', 'Lente intercambiable', 25000, 'CA'),
     ('CASE4', 'Iluminación integrada', 10000, 'CA');
 
--- =========================================
--- 1. Usuarios (empleados y compradores)
--- =========================================
--- Se cifran las contraseñas con AES_ENCRYPT (utilizando la clave 'clave_secreta')
+
 INSERT INTO Usuarios (ID_Usuario, US_Nombre_Usuario, US_Correo, US_Contrasenia, US_Puesto, US_Estado) VALUES
-    -- Empleados:
+    -- Empleados
     (1, 'EMPa9B2cD', 'alejandro.morales@modp.co.cr', AES_ENCRYPT('Pass@123','clave_secreta'), 'Empleado', 'A'),
     (2, 'EMPf3G8hI', 'valentina.rivas@modp.co.cr', AES_ENCRYPT('Pass@123','clave_secreta'), 'Empleado', 'I'),
     (3, 'EMPl6K7mN', 'diego.pacheco@modp.co.cr', AES_ENCRYPT('Pass@123','clave_secreta'), 'Empleado', 'I'),
     (4, 'ADMz4Q7wX', 'santiago.jimenez@modp.co.cr', AES_ENCRYPT('Pass@123','clave_secreta'), 'Admin', 'A'),
     (5, 'ADMp5R2yT', 'camila.vega@modp.co.cr', AES_ENCRYPT('Pass@123','clave_secreta'), 'Admin', 'A'),
-    -- Compradores:
-    (6, 'TrNt9V3sR', 'juan.perez@example.com', AES_ENCRYPT('A1b2C3d4E5!@#%', 'clave_secreta'), 'Compra', 'A'),
-  (7,'LpJu8L2kP', 'maria.gonzalez@example.com', AES_ENCRYPT('B2c3D4e5F6#@!$', 'clave_secreta'), 'Compra', 'A'),
-  (8,'Ssxr5D4mW', 'carlo.martinez@example.com', AES_ENCRYPT('X9y8Z7w6V5!@#$', 'clave_secreta'), 'Compra', 'A'),
-  (9,'pcSn1S7qZ', 'luis.rodriguez@example.com', AES_ENCRYPT('M3n4O5p6Q7%&*()', 'clave_secreta'), 'Compra', 'A'),
-  (10,'Yubo3F6jU', 'ana.perez@example.com', AES_ENCRYPT('Z8x7C6v5B4!@#QW', 'clave_secreta'), 'Compra', 'A');
-   /* (6, 'TrNt9V3sR', 'miguel.soto@example.com', AES_ENCRYPT('Buy3r@123','clave_secreta'), 'Compra', 'A'),
-    (7, 'LpJu8L2kP', 'laura.guzman@example.com', AES_ENCRYPT('Buy3r@123','clave_secreta'), 'Compra', 'I'),
-    (8, 'Ssxr5D4mW', 'ricardo.molina@example.com', AES_ENCRYPT('Buy3r@123','clave_secreta'), 'Compra', 'A'),
-    (9, 'pcSn1S7qZ', 'isabella.fuentes@example.com', AES_ENCRYPT('Buy3r@123','clave_secreta'), 'Compra', 'I'),
-    (10, 'Yubo3F6jU', 'jorge.cabrera@example.com', AES_ENCRYPT('Buy3r@123','clave_secreta'), 'Compra', 'A')*/;
+    -- Compradores
+    (6, 'TrNt9V3sR', 'juan.perez@example.com', AES_ENCRYPT('A1b2C3d4E5!@#%','clave_secreta'), 'Compra', 'A'),
+    (7, 'LpJu8L2kP', 'maria.gonzalez@example.com', AES_ENCRYPT('B2c3D4e5F6#@!$','clave_secreta'), 'Compra', 'A'),
+    (8, 'Ssxr5D4mW', 'carlo.martinez@example.com', AES_ENCRYPT('X9y8Z7w6V5!@#$','clave_secreta'), 'Compra', 'A'),
+    (9, 'pcSn1S7qZ', 'luis.rodriguez@example.com', AES_ENCRYPT('M3n4O5p6Q7%&*()','clave_secreta'), 'Compra', 'A'),
+    (10, 'Yubo3F6jU', 'ana.perez@example.com', AES_ENCRYPT('Z8x7C6v5B4!@#QW','clave_secreta'), 'Compra', 'A');
 
--- =========================================
--- 2. Horarios
--- =========================================
+
 INSERT INTO Horarios (ID_Horario, H_Hora_inicio, H_Hora_salida, H_Descripcion) VALUES
     (1, '08:00:00', '16:00:00', 'Turno matutino'),
     (2, '09:00:00', '17:00:00', 'Turno estándar'),
@@ -287,21 +278,16 @@ INSERT INTO Horarios (ID_Horario, H_Hora_inicio, H_Hora_salida, H_Descripcion) V
     (4, '07:00:00', '15:00:00', 'Turno temprano'),
     (5, '12:00:00', '20:00:00', 'Turno vespertino');
 
--- =========================================
--- 3. Compradores (usa el ID de Usuario correspondiente)
--- =========================================
+
 INSERT INTO Compradores (ID_Comprador, COM_Nombre, COM_Apellido, COM_Direccion, COM_Pais, COM_Provincia, COM_Canton, COM_Distrito)
 VALUES
-  (1, 'Juan', 'Perez', 'Calle 123, San José', 1, 1, 1, 1),
-  (2, 'Maria', 'Gonzalez', 'Av. Central 456, Desamparados', 1, 1, 2, 2),
-  (3, 'Carlo', 'Martinez', 'Calle Luna, Santo Domingo', 2, 4, 13, 13),
-  (4, 'Luis', 'Rodriguez', 'Calle Falsa 789, Buenos Aires', 3, 8, 17, 29),
-  (5, 'Ana', 'Perez', 'Av. Libertad 321, Córdoba', 3, 9, 18, 33);
+    (1, 'Juan', 'Perez', 'Calle 123, San José', 1, 1, 1, 1),
+    (2, 'Maria', 'Gonzalez', 'Av. Central 456, Desamparados', 1, 1, 2, 2),
+    (3, 'Carlo', 'Martinez', 'Calle Luna, Santo Domingo', 2, 4, 13, 13),
+    (4, 'Luis', 'Rodriguez', 'Calle Falsa 789, Buenos Aires', 3, 8, 17, 29),
+    (5, 'Ana', 'Perez', 'Av. Libertad 321, Córdoba', 3, 9, 18, 33);
 
 
--- =========================================
--- 4. Empleados (se asignan los horarios correspondientes)
--- =========================================
 INSERT INTO Empleados (EMP_ID, EMP_ID_Horario, EMP_Nombre, EMP_Apellido) VALUES
     (1, 1, 'Alejandro', 'Morales'),
     (2, 2, 'Valentina', 'Rivas'),
@@ -309,9 +295,7 @@ INSERT INTO Empleados (EMP_ID, EMP_ID_Horario, EMP_Nombre, EMP_Apellido) VALUES
     (4, 4, 'Santiago', 'Jiménez'),
     (5, 5, 'Camila', 'Vega');
 
--- =========================================
--- 5. Tarjetas (para compradores, datos sensibles cifrados)
--- =========================================
+
 INSERT INTO Tarjetas (ID_Tarjeta, ID_Comprador, TAR_Nombre, TAR_Num_Tarjeta, TAR_Fecha_Vencimiento, TAR_Codigo_Seguridad, TAR_Saldo) VALUES
     (1, 6, 'Miguel Soto', AES_ENCRYPT('4532556789012345','clave_secreta'), '2027-06-15', AES_ENCRYPT('123','clave_secreta'), 500000),
     (2, 7, 'Laura Guzmán', AES_ENCRYPT('5500550055005500','clave_secreta'), '2026-11-30', AES_ENCRYPT('456','clave_secreta'), 300000),
@@ -319,18 +303,14 @@ INSERT INTO Tarjetas (ID_Tarjeta, ID_Comprador, TAR_Nombre, TAR_Num_Tarjeta, TAR
     (4, 9, 'Isabella Fuentes', AES_ENCRYPT('6011000990139424','clave_secreta'), '2029-08-20', AES_ENCRYPT('321','clave_secreta'), 600000),
     (5, 10, 'Jorge Cabrera', AES_ENCRYPT('3566002020202020','clave_secreta'), '2027-12-05', AES_ENCRYPT('654','clave_secreta'), 350000);
 
--- =========================================
--- 6. FAQ
--- =========================================
+
 INSERT INTO FAQ (ID_Preguntas, F_Pregunta) VALUES
     (1, '¿Realizan entregas?'),
     (2, '¿Qué métodos de pago aceptan en línea?'),
     (3, '¿Ofrecen garantía en productos personalizados?'),
     (4, '¿Cuál es la política de devoluciones y reembolsos?');
 
--- =========================================
--- 7. Comentarios
--- =========================================
+
 INSERT INTO Comentarios (ID_Comentario, CO_Calificacion, Descripción) VALUES
     (1, '5', 'Servicio excelente y productos de alta calidad.'),
     (2, '4', 'Buena atención, pero se puede mejorar la rapidez en la entrega.'),
@@ -338,31 +318,25 @@ INSERT INTO Comentarios (ID_Comentario, CO_Calificacion, Descripción) VALUES
     (4, '2', 'El producto llegó con leves desperfectos.'),
     (5, '1', 'Experiencia negativa, el pedido presentó múltiples inconvenientes.');
 
--- =========================================
--- 8. Progreso de Proyecto
--- =========================================
+
 INSERT INTO Progreso_Proyecto (ID_Proyecto_Progreso, Descripcion, Detalles) VALUES
     (1, 'Planificación', 'Definiendo requerimientos y estableciendo metas.'),
     (2, 'Desarrollo', 'Implementación en curso con revisiones periódicas.'),
     (3, 'Pruebas', 'Realizando pruebas de calidad y ajustes finales.'),
     (4, 'Finalizado', 'Proyecto completado y entregado al cliente.');
 
--- =========================================
--- 9. Proyectos
--- =========================================
+
 INSERT INTO Proyectos (ID_Empleado, PRO_Progreso, ID_Articulo, ID_Comprador)
 VALUES 
     (1, 1, 'TE001', 6),
     (2, 2, 'TE001', 7);
 
--- Asignación de modificaciones a proyectos
+
 INSERT INTO Proyecto_Modificaciones (ID_Proyecto, ID_Servicio) VALUES
     (1, 'TESE2'),
     (2, 'TESE2');
 
--- =========================================
--- 10. Feedback
--- =========================================
+
 INSERT INTO Feedback (ID_Feedback, FE_Estrellas, FE_Comentario) VALUES
     (1, 5, 'El proyecto superó mis expectativas.'),
     (2, 4, 'Buen desempeño, aunque hubo algunas demoras.'),
@@ -370,9 +344,7 @@ INSERT INTO Feedback (ID_Feedback, FE_Estrellas, FE_Comentario) VALUES
     (4, 2, 'La calidad final no fue la esperada.'),
     (5, 1, 'Muy insatisfecho con el resultado final.');
 
--- =========================================
--- 11. Factura_Detalle
--- =========================================
+
 INSERT INTO Factura_Detalle 
     (ID_Factura, ID_Proyecto, ID_Articulo, ID_Tarjeta, ID_Comprador, FD_Cantidad, FA_Fecha, FD_Precio, FD_Precio_Final, FA_Detalle)
 VALUES 

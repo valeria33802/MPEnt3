@@ -18,4 +18,4 @@ EXPOSE 3000
 
 # Ejecutamos wait-for-it antes de iniciar Node
 # Sustituye "mysql:3306" por el host:puerto donde corre MySQL en la red de Docker
-CMD ["/wait-for-it.sh", "mysql:3306",  "-t", "30", "--", "node", "server.js"]
+CMD ["/wait-for-it.sh", "mysql:3306",  "-t", "50", "--", "node", "server.js"]
